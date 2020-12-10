@@ -94,7 +94,7 @@ func sleepyGopher(id int, c chan int) {
 > 这个模式适用于任何想要控制事件完成时间的场景。通过将动作放入 goroutine 并在动作完成时向通道执行发送操作，我们可以为 Go 中的任何动作都设置超时。
 
 **注意：**
-> 即使程序已经停止等待 goroutine，但只要 main 函数还没返回，仍在运行的 goroutine 就会继续占用内存。所以在情况运行的情况下，我们还是应该尽量结束无用的 goroutine。
+> 即使程序已经停止等待 goroutine，但只要 main 函数还没返回，仍在运行的 goroutine 就会继续占用内存。所以在情况允许的情况下，我们还是应该尽量结束无用的 goroutine。
 
 
 **什么都不做的 nil 通道**
